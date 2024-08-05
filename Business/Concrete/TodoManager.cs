@@ -32,7 +32,8 @@ namespace Business.Concrete
 
         public List<Todo> GetUnComplatedTodos()
         {
-            throw new NotImplementedException();
+            var todos = _todoDal.GetList(t => t.IsComplated == true);
+            return todos;
         }
 
         public List<Todo> GetComplatedTodos()
