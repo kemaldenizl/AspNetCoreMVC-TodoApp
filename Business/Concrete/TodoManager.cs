@@ -26,7 +26,8 @@ namespace Business.Concrete
 
         public Todo GetTodo(int id)
         {
-            throw new NotImplementedException();
+            var todo = _todoDal.Get(t => t.Id == id);
+            return todo;
         }
 
         public List<Todo> GetUnComplatedTodos()
