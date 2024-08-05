@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,40 @@ namespace Business.Concrete
         {
             _todoDal = todoDal;
         }
+
+        public List<Todo> GetAllTodos()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Todo GetTodo(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Todo> GetUnComplatedTodos()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Todo> GetComplatedTodos()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Add(Todo todo)
+        {
+            throw new NotImplementedException();
+        }
+        public void Update(Todo todo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Todo todo)
+        {
+            throw new NotImplementedException();
+        }
+        
     }
 }
