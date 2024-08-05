@@ -53,7 +53,7 @@ namespace Business.Concrete
 
         public void Delete(Todo todo)
         {
-            throw new NotImplementedException();
+            _todoDal.Delete(todo);
         }
         
     }
