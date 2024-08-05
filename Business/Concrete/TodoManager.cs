@@ -44,7 +44,7 @@ namespace Business.Concrete
 
         public void Add(Todo todo)
         {
-            
+            _todoDal.Add(todo);
         }
         public void Update(Todo todo)
         {
