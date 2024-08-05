@@ -32,19 +32,19 @@ namespace Business.Concrete
 
         public List<Todo> GetUnComplatedTodos()
         {
-            var todos = _todoDal.GetList(t => t.IsComplated == true);
+            var todos = _todoDal.GetList(t => t.IsComplated == false);
             return todos;
         }
 
         public List<Todo> GetComplatedTodos()
         {
-            var todos = _todoDal.GetList(t => t.IsComplated == false);
+            var todos = _todoDal.GetList(t => t.IsComplated == true);
             return todos;
         }
 
         public void Add(Todo todo)
         {
-            throw new NotImplementedException();
+            
         }
         public void Update(Todo todo)
         {
