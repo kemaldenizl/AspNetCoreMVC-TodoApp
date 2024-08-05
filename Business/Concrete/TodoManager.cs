@@ -48,7 +48,7 @@ namespace Business.Concrete
         }
         public void Update(Todo todo)
         {
-            throw new NotImplementedException();
+            _todoDal.Update(todo);
         }
 
         public void Delete(Todo todo)
