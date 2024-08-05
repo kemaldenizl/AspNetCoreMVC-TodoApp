@@ -20,7 +20,8 @@ namespace Business.Concrete
 
         public List<Todo> GetAllTodos()
         {
-            throw new NotImplementedException();
+            var todos = _todoDal.GetList();
+            return todos;
         }
 
         public Todo GetTodo(int id)
