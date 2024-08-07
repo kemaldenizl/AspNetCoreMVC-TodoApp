@@ -1,4 +1,5 @@
-﻿@await Component.InvokeAsync("CreateTodo")
+﻿@model TodoViewModel
+@await Component.InvokeAsync("CreateTodo")
 @await Component.InvokeAsync("FilterTodo")
 
 <div class="row">
@@ -15,15 +16,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Lorem ipsum dolor sit amet.</td>
-                <td>04.04.2003</td>
-                <td>04.04.2003</td>
-                <td>04.04.2003</td>
-                <td><input class="form-check-input" type="checkbox" disabled></td>
-                <td><a class="btn btn-warning">Edit</a></td>
-                <td><a class="btn btn-danger">Delete</a></td>
-            </tr>
+            @foreach(var todo in Model.Todos)
+            {
+                <tr>
+                    <td>@todo.Description</td>
+                    <td>@todo.CreateDate</td>
+                    <td>@todo.StartDate</td>
+                    <td>@todo.EndDate</td>
+                    <td><input class="form-check-input" type="checkbox" checked="@(todo.IsComplated ? "checked" : "")"></td>
+                    <td><a class="btn btn-warning">Edit</a></td>
+                    <td><a class="btn btn-danger">Delete</a></td>
+                </tr>
+            }
         </tbody>
     </table>
 </div>
+

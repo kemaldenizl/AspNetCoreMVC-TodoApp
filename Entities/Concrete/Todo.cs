@@ -22,5 +22,5 @@ public partial class Todo : IEntity
 
     public DateOnly? EndDate { get; set; }
 
-    public bool? IsComplated { get; set; }
+    public bool IsComplated { get; set; }
 }
