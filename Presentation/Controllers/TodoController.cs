@@ -18,7 +18,7 @@ namespace Presentation.Controllers
         public IActionResult Index()
         {
             _todoViewModel.Todos = _todoService.GetAllTodos();
-            return View(_todoViewModel.Todos);
+            return View(_todoViewModel);
         }
 
         public IActionResult Error()
