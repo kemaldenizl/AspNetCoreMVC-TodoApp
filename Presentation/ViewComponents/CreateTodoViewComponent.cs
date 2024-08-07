@@ -18,6 +18,11 @@ namespace Presentation.ViewComponents
             return View();
         }
 
-        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Invoke([Bind("Id, Description, CreateDate, StartDate, EndDate, IsComplated")] Todo todo)
+        {
+            
+        }
     }
 }
