@@ -1,3 +1,9 @@
+using Business.Abstract;
+using Business.Concrete;
+using DataAccess.Abstract;
+using DataAccess.Concrete.EntityFramework;
+using Presentation.Models;
+
 namespace Presentation
 {
     public class Program
@@ -8,6 +14,9 @@ namespace Presentation
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddSingleton<TodoViewModel>();
+            builder.Services.AddSingleton<ITodoService, TodoManager>();
+            builder.Services.AddSingleton<ITodoDal, EfTodoDal>();
 
             var app = builder.Build();
 
