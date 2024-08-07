@@ -1,1 +1,29 @@
-﻿
+﻿@await Component.InvokeAsync("CreateTodo")
+@await Component.InvokeAsync("FilterTodo")
+
+<div class="row">
+    <table class="table table-light table-striped border border-info rounded">
+        <thead>
+            <tr>
+                <th>Todo</th>
+                <th>Create Date</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Complated ?</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td>04.04.2003</td>
+                <td>04.04.2003</td>
+                <td>04.04.2003</td>
+                <td><input class="form-check-input" type="checkbox" disabled></td>
+                <td><a class="btn btn-warning">Edit</a></td>
+                <td><a class="btn btn-danger">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
