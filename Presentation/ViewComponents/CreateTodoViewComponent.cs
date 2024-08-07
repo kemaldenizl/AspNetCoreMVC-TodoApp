@@ -20,9 +20,15 @@ namespace Presentation.ViewComponents
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Invoke([Bind("Id, Description, CreateDate, StartDate, EndDate, IsComplated")] Todo todo)
+        public ViewViewComponentResult Invoke([Bind("Id, Description, CreateDate, StartDate, EndDate, IsComplated")] Todo todo)
         {
-            
+            if (ModelState.IsValid)
+            {
+                _todoService.Add(todo);
+                return View();
+            }
+
+            return View(todo);
         }
     }
 }
